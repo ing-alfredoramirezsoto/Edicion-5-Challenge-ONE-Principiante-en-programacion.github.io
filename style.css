@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    background: #FDFEFE;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo{
+    width: 6%;
+    height: auto;
+}
+
+main{
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-area{
+    width: 100%;
+    padding: 1%;
+    border: none;
+    color: black;
+    margin-top: 40px;
+}
+
+::placeholder{ color: black; }
+    .text-area:focus{ 
+        outline: none;
+    }
+
+
+.m-encriptado{
+    width: 100%;
+    padding: 1%;
+    background: white;
+    background-image: url("/img/casual-life.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: contain;
+    border: none;
+    border-radius: 24px;
+    color: black;
+    margin-left: 0;
+    margin-top: 2%;
+    padding-left: 20px;
+    position: relative;
+}
+
+.m-encriptado:not(:focus) {
+    background-image: url("./img/casual-life.png");
+}
+
+.m-encriptado:focus{
+    outline: none;
+    background-image: none;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-top: 18px;
+}
+
+.encriptar{
+    background-color: #17202A;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    
+}
+
+.desencriptar{
+    background: white;
+    border-radius: 24px;
+    color: black;
+    cursor: pointer;
+    height: 50px;
+    margin-left: 30px;
+    width: 250px;
+}
+
+.copiar{
+    border: 1px solid black;
+    border-radius: 24px;
+    color: black;
+    cursor: pointer;
+    height: 50px;
+    margin-top: 2%;
+    position: relative;
+    width: 250px;
+}
+
+.informacion{
+    color: #495057;
+    font-size: 18px;
+    margin-bottom: 1%;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* Smartphones*/
+
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .botones{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .encriptar, .desencriptar {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .desencriptar {
+        margin-left: auto;
+    }
+
+    footer {
+        font-size: 12px;  
+        text-align: center; 
+    }
+}
+
+
+
+/* Tablets */
+
+@media screen and (max-width: 900px) {
+    .logo{
+        width: 25%;
+    }
+
+    main{
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .text-area, .m-encriptado{
+        width: 100%;
+    }
+
+    .botones{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .encriptar, .desencriptar{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .copiar{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
